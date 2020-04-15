@@ -1,22 +1,18 @@
-====================================
-Django REST Framework JSON CamelCase
-====================================
-
-.. image:: https://travis-ci.org/vbabiy/djangorestframework-camel-case.png?branch=master
-        :target: https://travis-ci.org/vbabiy/djangorestframework-camel-case
-
-.. image:: https://badge.fury.io/py/djangorestframework-camel-case.svg
-    :target: https://badge.fury.io/py/djangorestframework-camel-case
+=============================================
+Django REST Framework JSON CamelCase Advanced
+=============================================
 
 Camel case JSON support for Django REST framework.
+
+Added the class CamelCaseOrderingFilter in order to allow camelCase on Ordering Filters.
 
 ============
 Installation
 ============
 
-At the command line::
+In the requirements.txt (or via pip install)::
 
-    $ pip install djangorestframework-camel-case
+    $ git+https://github.com/mkatenhusen/djangorestframework-camel-case.git@master
 
 Add the render and parser to your django settings file.
 
@@ -37,6 +33,10 @@ Add the render and parser to your django settings file.
             'djangorestframework_camel_case.parser.CamelCaseMultiPartParser',
             'djangorestframework_camel_case.parser.CamelCaseJSONParser',
             # Any other parsers
+        ),
+        'DEFAULT_FILTER_BACKENDS': (
+           'djangorestframework_camel_case.ordering.CamelCaseOrderingFilter',
+           # Any other filter backends
         ),
     }
     # ...
