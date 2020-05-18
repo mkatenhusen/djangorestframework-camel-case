@@ -9,6 +9,10 @@ DEFAULTS = {
     "RENDERER_CLASS": "rest_framework.renderers.JSONRenderer",
     "PARSER_CLASS": "rest_framework.parsers.JSONParser",
     "JSON_UNDERSCOREIZE": {"no_underscore_before_number": False},
+    "ADVANCED_ORDERING": {
+        "descending_nulls_last": True,
+        "ascending_nulls_last": False,
+    },
 }
 
 # List of settings that may be in string import notation.
