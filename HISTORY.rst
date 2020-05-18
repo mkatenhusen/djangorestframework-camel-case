@@ -3,6 +3,11 @@
 History
 =======
 
+1.1.2b (2020-05-18)
+------------------
+
+- add AdvancedCamelCaseOrderingFilter
+
 1.1.2a (2020-04-15)
 ------------------
 
